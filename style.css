@@ -1,0 +1,172 @@
+/* fonts */
+
+@font-face {
+  font-family: "greatVibes";
+  src: url("./fonts/GreatVibes-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RuhlMedium";
+  src: url("./fonts/FrankRuhlLibre-Medium.ttf");
+}
+
+@font-face {
+  font-family: "RuhlRegular";
+  src: url("./fonts/FrankRuhlLibre-Regular.ttf");
+}
+
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(1.5rem + 1vw);
+  --big: calc(6rem + 1vw);
+  --special-color: #906272;
+  --background-color: #414141;
+  --gray-text: #525252;
+}
+
+body {
+  font-family: "RuhlMedium", sans-serif;
+}
+
+p,
+li,
+a,
+input {
+  font-size: var(--text);
+}
+
+h1 {
+  font-size: var(--header1);
+  font-family: "GreatVibes", sans-serif;
+}
+
+h2 {
+  font-size: var(--header2);
+}
+
+h3 {
+  font-size: var(--header3);
+}
+h4,
+h5 {
+  font-size: var(--header4);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header section navbar */
+
+.head-nav {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+}
+
+.navbar {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+#logo {
+  flex: 1 1 20rem;
+}
+
+.navbar ul {
+  display: flex;
+  flex: 1 1 20rem;
+  justify-content: space-around;
+}
+
+/* hero section */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  width: 95%;
+  margin: 0 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.hero-intro {
+  text-align: center;
+  flex: 2 1 40rem;
+}
+
+.hero-intro a {
+  padding: 2rem 8rem;
+  border: 3px solid black;
+  margin-bottom: 4rem;
+}
+
+.hero-intro p {
+  padding: 5rem 10rem;
+  color: var(--gray-text);
+}
+
+.hero-intro h2 {
+  padding-top: 3rem;
+}
+
+.hero-img {
+  background: linear-gradient(#dad8dd, #dad1d4);
+  flex: 1 1 40rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* responsive */
+
+@media screen and (max-width: 842px) {
+  .hero p {
+    padding: 5rem 3rem;
+  }
+
+  .hero {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3rem;
+    --big: 8rem;
+  }
+}
