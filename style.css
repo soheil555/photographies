@@ -38,6 +38,7 @@ html {
 
 body {
   font-family: "RuhlMedium", sans-serif;
+  animation: mainPage 1.5s normal forwards;
 }
 
 p,
@@ -94,7 +95,7 @@ ul {
   margin: auto;
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 0rem;
 }
 
 #logo {
@@ -115,6 +116,7 @@ ul {
   width: 95%;
   margin: 0 0 0 auto;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .hero-intro {
@@ -140,12 +142,59 @@ ul {
 .hero-img {
   background: linear-gradient(#dad8dd, #dad1d4);
   flex: 1 1 40rem;
+  position: relative;
+  z-index: 1;
 }
 
-.hero-img img {
+.hero-img .elena {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.planet {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  max-height: 80%;
+  z-index: -1;
+  transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  animation: plantComeUp 1.5s ease-in-out 0.5s forwards,
+    plantShake 2.5s 2.5s infinite alternate-reverse;
+  transform-origin: bottom;
+}
+
+.planet2 {
+  left: 40%;
+}
+
+/* animations */
+
+@keyframes plantComeUp {
+  from {
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+  }
+  to {
+    transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes plantShake {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes mainPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* responsive */
