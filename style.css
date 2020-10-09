@@ -331,6 +331,34 @@ ul {
   height: 100%;
   object-fit: cover;
 }
+
+footer {
+  background: var(--background-color);
+}
+
+.footer-section {
+  color: white;
+  min-height: 15vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-head {
+  flex: 2 1 40rem;
+}
+
+.footer-social {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-section p {
+  font-size: 3.5rem;
+}
+
 /* animations */
 
 @keyframes plantComeUp {
@@ -431,6 +459,15 @@ ul {
 
   .contact-img {
     display: none;
+  }
+
+  .footer-head {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section {
+    padding: 3rem 0;
   }
 }
 
