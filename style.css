@@ -44,7 +44,9 @@ body {
 p,
 li,
 a,
-input {
+input,
+label,
+button {
   font-size: var(--text);
 }
 
@@ -271,6 +273,64 @@ ul {
   opacity: 0.95;
 }
 
+/* contact section */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 3 1 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contact-form label {
+  font-size: var(--header1);
+}
+
+.contact-form span {
+  font-size: 8rem;
+  color: var(--special-color);
+}
+
+.contact-form input {
+  background: var(--background-color);
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  margin: 3rem 0;
+  color: white;
+}
+
+.contact-form input:focus {
+  border: 4px solid rgb(148, 148, 197);
+}
+
+.contact-form button {
+  padding: 1rem 8rem;
+  background: var(--special-color);
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.contact-form button:active {
+  background: var(--background-color);
+}
+.contact-img {
+  flex: 1 1 40rem;
+}
+
+.contcat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* animations */
 
 @keyframes plantComeUp {
@@ -366,6 +426,10 @@ ul {
   }
 
   .gallery-head {
+    display: none;
+  }
+
+  .contact-img {
     display: none;
   }
 }
